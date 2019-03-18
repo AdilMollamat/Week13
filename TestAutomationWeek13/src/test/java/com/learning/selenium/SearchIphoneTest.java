@@ -22,6 +22,7 @@ public class SearchIphoneTest {
 	private StringBuffer verificationErrors = new StringBuffer();
 
 	
+	
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		System.setProperty("webdriver.gecko.driver", "src/test/resources/geckodriver.exe");
