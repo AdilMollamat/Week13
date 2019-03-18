@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Regression Test Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.selenium.customlibrary.report.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test name="Greate Course Smoke Test">
+    <packages>
+      <package name="com.selenium.week8.greatcourses.tests"/>
+    </packages>
+    <classes>
+      <class name="com.selenium.week8.greatcourses.tests.GreatCourseRegressionTests"/>
+      <class name="com.selenium.week8.greatcourses.tests.RemoteTests"/>
+    </classes>
+  </test> <!-- Greate Course Smoke Test -->
+  <test name="Greate Course Smoke Test(failed)" parallel="tests">
+    <classes>
+      <class name="com.selenium.week8.greatcourses.tests.GreatCourseRegressionTests">
+        <methods>
+          <include name="test3"/>
+          <include name="test2"/>
+          <include name="beforEachTest"/>
+          <include name="buyCourseTest"/>
+          <include name="beforeAllTests"/>
+          <include name="afterEachTest"/>
+        </methods>
+      </class> <!-- com.selenium.week8.greatcourses.tests.GreatCourseRegressionTests -->
+      <class name="com.selenium.week8.greatcourses.tests.RemoteTests">
+        <methods>
+          <include name="testing_selenium_remote"/>
+        </methods>
+      </class> <!-- com.selenium.week8.greatcourses.tests.RemoteTests -->
+    </classes>
+  </test> <!-- Greate Course Smoke Test(failed) -->
+</suite> <!-- Failed suite [Regression Test Suite] -->
