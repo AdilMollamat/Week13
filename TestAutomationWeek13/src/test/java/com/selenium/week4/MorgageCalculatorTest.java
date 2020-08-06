@@ -32,6 +32,7 @@ public class MorgageCalculatorTest {
 		// Go to url
 		driver.get("http://www.mortgagecalculator.org/");
 	}
+	
 
 	@AfterMethod
 	public void teardown() {
